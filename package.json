@@ -1,22 +1,43 @@
 {
-  "name": "js-tic-tac-toe",
+  "name": "ws-0300-js-tic-tac-toe",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "compile:css": "node-sass -rw --output-style compressed stylesheets/sass/ -o stylesheets/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/version-1/js-tic-tac-toe.git"
-  },
-  "author": "j.onodera26@gmail.com (https://github.com/version-1)",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/version-1/js-tic-tac-toe/issues"
-  },
-  "homepage": "https://github.com/version-1/js-tic-tac-toe#readme",
   "devDependencies": {
-    "node-sass": "^4.13.1"
+    "@prettier/plugin-php": "^0.16.1",
+    "autoprefixer": "^10.2.5",
+    "cross-env": "^7.0.3",
+    "postcss": "^8.2.14",
+    "prettier": "^2.2.1",
+    "resolve-url-loader": "^3.1.2",
+    "sass": "^1.32.7",
+    "sass-loader": "^11.0.1",
+    "tailwindcss": "^2.1.2"
+  },
+  "rtlcssConfig": {
+    "options": {
+      "autoRename": false,
+      "autoRenameStrict": false,
+      "blacklist": {},
+      "clean": true,
+      "greedy": false,
+      "processUrls": false,
+      "stringMap": []
+    },
+    "plugins": [],
+    "map": false
+  },
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "dependencies": {
+    "laravel-mix": "^6.0.11",
+    "laravel-mix-polyfill": "^3.0.0",
+    "postcss-custom-properties": "^11.0.0",
+    "postcss-import": "^14.0.1",
+    "postcss-nested": "^5.0.5"
   }
 }
