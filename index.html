@@ -1,16 +1,43 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Tic Tac Toe</title>
-    <link href="style-dist.css" rel="stylesheet" type="text/css" media="all" />
-  </head>
-  <body>
-    <main class="h-screen flex justify-center items-center">
-      <div class="container">
-        <h1 class="text-center text-xl">TIC TAC TOE</h1>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  <link href="style-dist.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+
+<body>
+  <main class="h-screen flex justify-center items-center">
+    <div class="container">
+      <div class="w-64 mx-auto">
+        <h1 class="title text-center text-xl text-green-800 font-bold mb-5">TIC TAC TOE</h1>
+        <div class="players flex justify-center text-center mb-5">
+          <div class="py-3 w-1/2 text-xl text-green-700 border-b-4 border-gray-200 is-active">○</div>
+          <div class="py-3 w-1/2 text-xl text-green-700">✗</div>
+        </div>
+        <div class="tic-tac-toe-table grid gap-2 grid-cols-3 mb-10">
+          <button class="tic-tac-toe-cell" data-cell="1"></button>
+          <button class="tic-tac-toe-cell" data-cell="2"></button>
+          <button class="tic-tac-toe-cell" data-cell="3"></button>
+          <button class="tic-tac-toe-cell" data-cell="4"></button>
+          <button class="tic-tac-toe-cell" data-cell="5"></button>
+          <button class="tic-tac-toe-cell" data-cell="6"></button>
+          <button class="tic-tac-toe-cell" data-cell="7"></button>
+          <button class="tic-tac-toe-cell" data-cell="8"></button>
+          <button class="tic-tac-toe-cell" data-cell="9"></button>
+        </div>
+        <div class="restart">
+          <p class="text-center mb-3">starting...</p>
+          <div class="text-center">
+            <button class="transition bg-green-600 hover:bg-green-800 text-white rounded py-2 px-14 mx-auto"><span class="mr-2">RESTART</span><i class="text-sm fas fa-redo"></i></button>
+          </div>
+        </div>
       </div>
-    </main>
-    <script type="text/javascript" src="js/function.js"></script>
-  </body>
+    </div>
+  </main>
+  <script type="text/javascript" src="js/function.js"></script>
+</body>
+
 </html>
