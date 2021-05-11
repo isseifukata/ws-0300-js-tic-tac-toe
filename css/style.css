@@ -1,0 +1,21 @@
+@tailwind base;
+
+@layer base {}
+
+@tailwind components;
+
+@layer components {
+  .tic-tac-toe-cell {
+    @apply transition bg-gray-200 rounded text-2xl text-gray-700 flex justify-center items-center w-20 h-20;
+  }
+  .tic-tac-toe-cell:not(:disabled){
+    @apply hover:opacity-60;
+  }
+  .player.is-active {
+    @apply border-b-4 border-gray-200;
+  }
+}
+
+@tailwind utilities;
+
+@layer utilities {}
